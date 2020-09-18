@@ -8,3 +8,6 @@ pipeline{
               git credentialsId: 'github_id', url: 'https://github.com/githubjigalooru/maven-web-application.git'    
                 
             }
+	}
+     }
+}
