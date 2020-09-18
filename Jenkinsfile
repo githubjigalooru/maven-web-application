@@ -20,13 +20,10 @@ pipeline{
 	}
 
 	post {
-  	 notBuilt {
-    	  sh "build fail"
+  	 always {
+    	  sh "echo sssssssssssssssssss"
   	  }
-  	 success {
-    	  sh "echo build success"
-         }
-        }
+  	
 
 
      }
