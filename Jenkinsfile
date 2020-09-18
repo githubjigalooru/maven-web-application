@@ -5,6 +5,6 @@ pipeline{
     stages {
         stage("scm_checkout") {
             steps {
-              sh "stepone"    
+              sh "echo first step completed"    
                 
             }
