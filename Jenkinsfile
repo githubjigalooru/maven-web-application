@@ -2,6 +2,9 @@ properties([[$class: 'JiraProjectProperty'], buildDiscarder(logRotator(artifactD
 
 pipeline{
     agent any
+    tools {
+      maven 'Maven_Home.3.6.3'
+    }
     stages {
         stage("scm_checkout") {
             steps {
@@ -9,5 +12,11 @@ pipeline{
                 
             }
 	}
+        stage ("build_artifact") {
+  	  steps {
+	    sh "mvn clean install"
+		}
+	}
+
      }
 }
