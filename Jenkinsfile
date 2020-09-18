@@ -5,9 +5,6 @@ pipeline{
     tools {
       maven 'Maven_Home.3.6.3'
     }
-    options {
-       timestamps
-    }
 
       stages {
         stage("scm_checkout") {
@@ -21,6 +18,16 @@ pipeline{
 	    sh "mvn clean install"
 		}
 	}
+
+	post {
+  	 notBuilt {
+    	  sh "build fail"
+  	  }
+  	 success {
+    	  sh "echo build success"
+         }
+        }
+
 
      }
 }
