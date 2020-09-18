@@ -5,7 +5,11 @@ pipeline{
     tools {
       maven 'Maven_Home.3.6.3'
     }
-    stages {
+    options {
+       timestamps
+    }
+
+      stages {
         stage("scm_checkout") {
             steps {
               git credentialsId: 'github_id', url: 'https://github.com/githubjigalooru/maven-web-application.git'    
