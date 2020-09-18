@@ -5,6 +5,6 @@ pipeline{
     stages {
         stage("scm_checkout") {
             steps {
-              sh "echo first step completed"    
+              git credentialsId: 'github_id', url: 'https://github.com/githubjigalooru/maven-web-application.git'    
                 
             }
