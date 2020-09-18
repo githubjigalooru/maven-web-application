@@ -16,15 +16,9 @@ pipeline{
         stage ("build_artifact") {
   	  steps {
 	    sh "mvn clean install"
-		}
-	}
-
-	post {
-  	 always {
-    	  sh "echo sssssssssssssssssss"
-  	  }
+	     }
   	
-
+        }
 
      }
 }
